@@ -1,0 +1,17 @@
+<footer class="footer">
+   
+    <span class="todo-count"><strong>{{pendientes}}</strong> pendientes</span>
+   
+    <ul class="filters">
+      <li>
+        <a [class.selected]="currentFilter === 'todos'" href="#/" (click)="changeFilter('todos')">All</a>
+      </li>
+      <li>
+        <a href="#/active" (click)="changeFilter('pendientes')" [class.selected]="currentFilter === 'pendientes'">Activo</a>
+      </li>
+      <li>
+        <a href="#/completed" (click)="changeFilter('completados')" [class.selected]="currentFilter === 'completados'">Completado</a>
+      </li>
+    </ul>
+    <button class="clear-completed" (click)="clear()">Limpiar completados</button>
+  </footer>
